@@ -1,25 +1,27 @@
-# StadLine Technical Test
+Test technique - Développeur frontend (JS)
+==========================================
 
 ## Présentation générale
 
 ### Tâche
 
-Le sujet de base est simple : il faut afficher le fil de discussion d'un ticket Github et déterminer qui est le plus bavard. L'habillage graphique est un peu différent de celui de Github, il y a un graphique, des filtres et dans l'idéal la possibilité d'ajouter un commentaire.
+Le sujet de base est simple : il faut afficher le fil de discussion d'un ticket Github et déterminer qui est le plus bavard.
 
 ### Règles
 
-* Le temps est libre mais il est tout de même conseillé de passer moins de 4h sur le sujet (temps de setup d'environnement compris). Ce n'est pas important si vous n'avez pas le temps de tout finir (ce n'est pas le but !)
-* Il est conseillé de finir les points requis avant de s'attaquer au bonus.
-* Il est aussi conseillé de faire un maximum de commits pour bien détailler les étapes de votre raisonnement au cours du développement.
-* N'hésitez pas à nous faire des retours et nous expliquer les éventuelles problématiques bloquantes que vous auriez rencontrées durant le développement vous empéchant de finir.
+* Pas plus de 4h, tant pis si vous n'avez pas le temps de tout finir !
+* Framework libre, on n'impose pas React (même si c'est notre préférence)
+* Finir les fonctionnalités principales avant de s'attaquer aux secondaires
+* Design responsive, avec le Desktop et le Smartphone en cibles principales
 
-### Setup
+Il est aussi conseillé de faire un maximum de commits pour bien détailler les étapes de votre raisonnement au cours du développement. N'hésitez pas à nous faire des retours et noter les difficultés que vous avez rencontrés durant le développement.
 
-* La charte graphique est fournie partiellement (uniquement desktop pour l'instant). Vous pouvez utiliser un framework CSS. L'appli doit être responsive, avec le Desktop et le Smartphone en cibles principales.
-* Vous pouvez utiliser un serveur NodeJS pour compiler vos fichiers, mais l'application doit pouvoir tourner entièrement dans le navigateur.
-* Vous pouvez faire un fork de ce dépot, puis attaquer le sujet.
+### Déroulement
 
-## Fonctionnalités
+* La charte graphique est fournie partiellement (uniquement desktop pour l'instant). Vous pouvez utiliser un framework CSS
+* Vous pouvez faire un fork de ce dépot, puis attaquer le sujet
+
+## Fonctionnalités principales
 
 ### Le fil de discussion
 
@@ -36,6 +38,8 @@ Dans un premier temps, uniquement afficher le titre, la discussion, les avatars.
 
 Dans la partie de gauche on affichera la liste des participants : on doit pouvoir masquer certains participants. Le design n'étant pas fourni, vous êtes libres du rendu (checkboxes ? effet graphique ?). Masquer un participant fait disparaitre ses messages du fil de discussion.
 
+## Fonctionalités secondaires
+
 ### Le graphique
 
 Afficher un graphique "pie chart" dans la partie gauche, avant la liste des participants. Cette partie s'appelle "Qui est le plus bavard ?".
@@ -46,7 +50,10 @@ Le principe : classer les participants en fonction du nombre de mots écrits. Vo
 
 Filtrer un participant le fait disparaitre du graphique.
 
-### Bonus (pour les rapides !)
+### Champ "nouveau message"
 
- * Ajouter un textarea sous la discussion pour permettre d'ajouter un commentaire. Il faudra faire un appel authentifié à l'API Github. Vous pouvez stocker les infos de connexion dans une configuration (pas besoin de formulaire de login).
- * Accompagner les changements d'affichage avec des animations (apparition / disparition des messages, mise à jour du graphique).
+Ajouter un textarea sous la discussion pour permettre d'ajouter un commentaire. Il faudra faire un appel authentifié à l'API Github. Vous pouvez stocker les infos de connexion dans une configuration (pas besoin de formulaire de login).
+
+### Amélioration UI
+
+Accompagner les changements d'affichage avec des animations (apparition / disparition des messages, mise à jour du graphique).
