@@ -44,7 +44,7 @@ Dans la partie de gauche on affichera la liste des participants : on doit pouvoi
 
 Afficher un graphique "pie chart" dans la partie gauche, avant la liste des participants. Cette partie s'appelle "Qui est le plus bavard ?".
 
-https://github.com/stadline/js-technical-test/raw/master/doc/pie-sample.png
+<img src="https://github.com/stadline/js-technical-test/raw/master/doc/pie-sample.png" />
 
 Le principe : classer les participants en fonction du nombre de mots écrits. Vous devrez donc compter le nombre de mot de chaque message et les regrouper par utilisateur.
 
