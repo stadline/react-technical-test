@@ -11,4 +11,4 @@ Il faudra faire l'intégralité des tâches de la catégorie ["Prérequis"](http
 
 Vous pouvez choisir une 2e catégorie et essayer de tout faire, ou piocher à gauche à droite en fonction de vos envies.
 
-L'idéal serait d'y consacrer **entre 1h et 1h30**, pas plus. Il est inutile de chercher à réaliser l'ensemble des tâches du projet, il faudrait beaucoup plus de temps que ça et ce n'est pas le but recherché.
+L'idéal serait d'y consacrer **pas plus de 2 heures**. Il est inutile de chercher à réaliser l'ensemble des tâches du projet, il faudrait beaucoup plus de temps que ça et ce n'est pas le but recherché.
