@@ -3,6 +3,7 @@ import Box from "@mui/joy/Box";
 import Sheet from "@mui/joy/Sheet";
 import Stack from "@mui/joy/Stack";
 import Typography from "@mui/joy/Typography";
+import ReactMarkdown from "react-markdown";
 
 type ChatBubbleProps = {
   body: string;
@@ -23,7 +24,9 @@ export default function ChatBubble({ body, variant, created_at, user }: ChatBubb
           <Typography level="body-xs" fontWeight="bold">
             {user.login}
           </Typography>
-          <Typography level="body-xs">{created_at}</Typography>
+          <Typography level="body-xs" sx={{ opacity: 0.5 }}>
+            {created_at}
+          </Typography>
         </Stack>
         <Box>
           <Sheet
@@ -36,8 +39,8 @@ export default function ChatBubble({ body, variant, created_at, user }: ChatBubb
               borderTopLeftRadius: 0,
             }}
           >
-            <Typography level="body-sm" color="primary">
-              {body}
+            <Typography level="body-sm" color="primary" component="div">
+              <ReactMarkdown>{body}</ReactMarkdown>
             </Typography>
           </Sheet>
         </Box>

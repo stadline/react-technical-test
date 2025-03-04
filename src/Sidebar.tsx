@@ -1,7 +1,24 @@
+import { useState, useEffect } from "react";
 import Input from "@mui/joy/Input";
 import Sheet from "@mui/joy/Sheet";
+import { useIssue } from "./IssueProvider";
+import { useDebounce } from "./useDebounce";
+import UsersList from "./UsersList";
+import { Divider, Typography } from "@mui/joy";
 
 export default function Sidebar() {
+  const { value, setValue } = useIssue();
+  const [inputValue, setInputValue] = useState(value);
+  const debouncedValue = useDebounce(inputValue, 500);
+
+  useEffect(() => {
+    setInputValue(value);
+  }, [value]);
+
+  useEffect(() => {
+    setValue(debouncedValue);
+  }, [debouncedValue, setValue]);
+
   return (
     <Sheet
       className="Sidebar"
@@ -19,7 +36,13 @@ export default function Sidebar() {
         borderColor: "divider",
       }}
     >
-      <Input value="facebook/react/issues/7901" />
+      <Typography level="body-xs" sx={{ color: "text.secondary" }} fontWeight="bold">
+        Enter a GitHub issue URL
+      </Typography>
+      <Input value={inputValue} onChange={(event) => setInputValue(event.target.value)} />
+      <Divider />
+
+      <UsersList />
     </Sheet>
   );
 }
